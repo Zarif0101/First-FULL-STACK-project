@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakibul Kaisar</title>
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <h2>PORT-FOLIO</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <div class="profile">
+                <div class="img1-con">
+                    <img src="/static/image/rakibul1.jpg" class="img1">
+                </div>
+                <div class="info">
+                    <h3>MD. Rakibul Kaisar</h3>
+                </div>
+                <div class="info2">
+                    <p>Graphic Designer</p>
+                </div>
+                <div class="about btn">
+                    <button onclick="about()"> About Me </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pro-head">
+            <h4>Projects</h4>
+        </div>
+        <div class="pro-container">
+            <div class="images">
+                <!-- Loop through the project images dynamically -->
+                {% for image in images %}
+                    <div class="image">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                    </div>
+                {% endfor %}
+
+            </div>
+            <div class="pop-up">
+                <span>&times;</span>
+                <img src="{% static 'images/1.jpg' %}" alt="">
+            </div>
+        </div>
+    
+    </main>
+        
+
+
+    <footer>
+        <div class="panel1 panel">
+            <ul>CONTACT ( Rakibul Kaisar ):
+                <li><i class="fa-brands fa-instagram"></i><a target="_blank" href="https://www.instagram.com/rakibul_kaisar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">INSTAGRAM</a></li>
+                <li><i class="fa-brands fa-facebook"></i><a target="_blank" href="https://www.facebook.com/profile.php?id=100086231654466">FACEBOOK</a></li>
+            </ul>
+        </div>
+        <div class="panel2 panel">
+            <ul>CONTACT-DEV (ASHFAQ ZARIF):
+                <li><i class="fa-brands fa-instagram"></i><a target="_blank" href="https://www.instagram.com/ashfaq_zarif/">INSTAGRAM</a></li>
+                <li><i class="fa-brands fa-facebook"></i><a target="_blank" href="https://www.facebook.com/ashfaqzarif/">FACEBOOK</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{% static 'JS/index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", Helvetica, sans-serif;
+}
+
+body {
+    background-color: #404040; /* Dark background */
+    color: #FFFFFF; /* Light text for better readability */
+    background-image: url("../image/bg2.jpg"); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* This will make the background image cover the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #A020F0 ; /* Darker header background */
+    box-shadow: 5px 5px 15px rgba(160, 32, 240, 0.5);
+}
+
+.heading h2 {
+    font-family: "Montserrat";
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #ffffff; /* Purple text */
+}
+
+
+/* Profile Section Styles */
+.profile {
+    margin: 40px auto;
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid #A020F0; /* Purple border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333; /* Darker background */
+    padding: 20px;
+    transition: box-shadow 0.6s ease;
+    border-radius: 10px;
+    background: rgba( 160, 32, 240, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.profile:hover {
+    box-shadow: 4px 4px 15px rgba(160, 32, 240, 0.5); /* Purple shadow on hover */
+}
+
+.img1-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #A020F0; /* Purple border */
+    transition: transform 0.3s ease;
+}
+
+.img1:hover {
+    transform: scale(1.1);
+}
+
+.info, .info2 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.btn button {
+    color: #FFFFFF;
+    margin-top: 9px;
+    height: 30px;
+    width: 80px;
+    border: 1px solid white;
+    background-color: #A020F0;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(160, 32, 240, 0.5); /* Purple shadow on hover */
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: hsl(277, 87%, 40%);
+    
+}
+
+.btn button:active {
+    box-shadow: none;
+    background-color: hsl(277, 87%, 35%);
+}
+/* Project */
+.pro-head{
+    
+    height: 50px;
+    font-size: 1.9rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A020F0;
+    box-shadow: 5px 5px 15px rgba(160, 32, 240, 0.5);
+    margin-bottom: 15px;
+}
+.pro-head h4{
+    font-family: "Montserrat";
+
+}
+
+
+.pro-container{
+    position: relative;
+    min-height: 100vh;
+}
+.pro-container .images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+.pro-container .images .image{
+    height: 250px;
+    width: 350px;
+    border: 5px solid #A020F0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+    overflow: hidden;
+    cursor: pointer;
+}
+.pro-container .images .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .4s ease-in-out;
+}
+.pro-container .images .image:hover img{
+    transform: scale(1.05);
+}
+.pro-container .pop-up{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.pro-container .pop-up span{
+    position: absolute;
+    top: 0; right: 10px; 
+    font-size: 60px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 100;
+}
+.pro-container .pop-up img {
+    max-width: 90%; /* Set a maximum width relative to the parent or screen size */
+    max-height: 80vh; /* Set a maximum height relative to the viewport height */
+    width: auto; /* Let the browser calculate the width based on the height */
+    height: auto; /* Let the browser calculate the height based on the width */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #A020F0;
+    border-radius: 5px;
+    object-fit: contain; /* Maintain the aspect ratio */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333333; /* Darker footer background */
+    color: #ffffff; /* Purple text */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.panel {
+    border-right: 1px solid #A020F0;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.panel li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.panel li a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .profile {
+        max-width: 90%;
+    }
+
+    .img1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    header, .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+        border-right: none;
+    }
+
+    .panel li {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
